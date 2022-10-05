@@ -6,7 +6,7 @@ pipeline {
     stages{
             stage('Build Docker Image'){
                     steps{
-                           sh "sudo  docker build  .  -t  onyilimba/nodeapp:${DOCKER_TAG}"
+                           sh "sudo  docker build  .  -t  Rajindradiva/nodeapp:${DOCKER_TAG}"
                     }
              }
       }
@@ -17,3 +17,4 @@ def  getDockerTag() {
   def tag = sh  script: 'git rev-parse HEAD', returnStdout: true
   return  tag
 }
+
